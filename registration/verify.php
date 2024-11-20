@@ -70,10 +70,14 @@ if(!check_verified()){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Verify</h1>
+    
     <?php include('header.php');?>
+
+    <h1>Verify</h1>
 
     <br><br>
     <div>

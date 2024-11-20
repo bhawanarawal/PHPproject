@@ -28,11 +28,14 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Signup</h1>
+    
 
     <?php include('header.php')?>
+    <h1>Signup</h1>
 
 
     <div>
@@ -43,6 +46,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                 <?php endforeach;?>
                 <?php endif;?>
         </div>
+        <div class="signup">
         <form method="post">
             <input type="text" name="username" placeholder="Username"><br>
             <input type="text" name="email" placeholder="Email"><br>
@@ -52,6 +56,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             <input type="submit" value="Signup">
 
         </form>
+        </div>
     </div>
 
 </body>
