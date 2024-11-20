@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+require 'C:\xampp\htdocs\PHPproject\registration\PHPMailer-master (1)\PHPMailer-master\src\Exception.php';
+require 'C:\xampp\htdocs\PHPproject\registration\PHPMailer-master (1)\PHPMailer-master\src\PHPMailer.php';
+require 'C:\xampp\htdocs\PHPproject\registration\PHPMailer-master (1)\PHPMailer-master\src\SMTP.php';
 
 function send_mail($recipient , $subject ,$message){
 
@@ -27,12 +27,12 @@ $content=$message;
 
 $mail->msgHTML($content);
 if(!$mail->send()){
-    //echo"Error while sending Email.";
-    //echo"<pre>";
-    //var_dump($mail);
+    echo"Error while sending Email.";
+    echo"<pre>";
+    var_dump($mail);
     return false;
 }else{
-    //echo "Email sent sucessfully";
+    echo "Email sent sucessfully";
     return true;
 }
 }

@@ -1,6 +1,6 @@
 <?php
 
-
+require "mail.php";
 require "functions.php";
 check_login();
 $errors=array();
@@ -17,6 +17,11 @@ if($_SERVER['REQUEST_METHOD']=="GET" && !check_verified()){
 
     $query="insert into verify (code,expires,email)values(:code,:expires,:email)";
     database_run($query,$vars);
+
+    $message="Your code is ". $vars['code'];
+    $subject="Email verification";
+    $recipient=$vars['email'];
+    send_mail($recipient,$subject,$message);
 }
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
