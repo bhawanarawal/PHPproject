@@ -125,8 +125,7 @@ if (isset($_POST["recover"])) {
             <h3>We received a request to reset your password.</h3>
             <p>Kindly click the below link to reset your password</p>
             http://localhost/PHPproject/loginSystem/reset.php
-            <br><br>
-            ";
+            <br><br>";
 
         if (!$mail->send()) {
         ?>
